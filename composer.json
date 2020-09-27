@@ -12,5 +12,12 @@
         "psr-4": {
             "Gsferro\\ResponseView\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gsferro\\ResourceCrudEasy\\Providers\\ResponseViewServiceProvider"
+            ]
+        }
     }
 }
