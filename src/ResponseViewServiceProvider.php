@@ -23,6 +23,9 @@ class ResponseViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'responseview');
+        $this->publishes([
+            __DIR__.'/resources/views' => resource_path('views/vendor/gsferro/responseview'),
+        ]);
     }
 }

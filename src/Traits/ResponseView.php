@@ -49,6 +49,7 @@ trait ResponseView
             trim($key) => $value
         ]);
     }
+
     /**
      * Add os valores padrões a serem enviados para a view
      *
