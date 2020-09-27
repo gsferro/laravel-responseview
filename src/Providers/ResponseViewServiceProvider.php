@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsferro\ResponseView;
+namespace Gsferro\ResponseView\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
