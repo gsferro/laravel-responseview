@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gsferro\\ResourceCrudEasy\\Providers\\ResponseViewServiceProvider"
+                "Gsferro\\ResponseView\\Providers\\ResponseViewServiceProvider"
             ]
         }
     }
