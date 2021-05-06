@@ -107,6 +107,32 @@ trait ResponseView
 
     /*
     |---------------------------------------------------
+    | Adicionar valores via direto de array
+    |---------------------------------------------------
+    */
+
+    /**
+     * Adiciona um array direto no data
+     *
+     * @param array $array
+     */
+    public function addArrayData(array $array)
+    {
+        $this->data = array_merge($this->data, $array);
+    }
+
+    /**
+     * Adiciona um array direto no mergeData
+     *
+     * @param array $array
+     */
+    public function addArrayMergeData(array $array)
+    {
+        $this->mergeData = array_merge($this->data, $array);
+    }
+
+    /*
+    |---------------------------------------------------
     | Retorno da view para renderização
     |---------------------------------------------------
     */
