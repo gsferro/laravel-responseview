@@ -1,6 +1,10 @@
 {
     "name": "gsferro/responseview",
     "description": "Response easy the dates from views",
+    "license": "MIT",
+    "keywords": [
+        "laravel", "blade", "view", "response"
+    ],
     "authors": [
         {
             "name": "Guilherme Ferro",
