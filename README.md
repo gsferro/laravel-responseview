@@ -1,5 +1,6 @@
 # Laravel ResponseView
 Um jeito fácil de fazer reuso de variaveis e disponibilizar para a view.
+Pode ser usado no livewire.
 
 ### Instalação
 - Faça o download via composer
@@ -12,7 +13,7 @@ use ResponseView;
 ``
 
 ### Métodos 
-- $this->addData($chave, $valor)
+- `$this->addData($chave, $valor)`
 
 > Prepara os dados para ser enviado para a view dentro do scope do metodo
 
@@ -28,7 +29,7 @@ public function index()
 }
 ```
  
-- $this->addMergeData($chave, $valor)
+- `$this->addMergeData($chave, $valor)`
 
 > Prepara os dados para ser enviado para a view globalmente.
 > deve ser usado no construct do Controller
@@ -42,7 +43,7 @@ public function __construct()
 }
 ```
  
-- $this->addTitulo($valor) / $this->addSubTitulo($valor)
+- `$this->addTitulo($valor)` / `$this->addSubTitulo($valor)`
 
 > Coloca um titulo e um subtitulo na pagina
 
@@ -54,7 +55,7 @@ public function __construct()
     $this->addSubTitulo("Sub titulo da pagina"); //$subTitulo
 }
 ```
-- addBreadcrumb 
+- `$this->addBreadcrumb($titulo, $href = null, $icone = null)`
 
 > Adiciona o breadcrumb em cada view
 >
@@ -83,3 +84,33 @@ ex
      $this->addBreadcrumb("titulo 3", null, 'file-o'); // titulo > titulo 2 > titulo 3
  }
  ```
+
+- `$this->addArrayData(array $array)`
+
+> Adiciona um array direto no data
+
+ex:
+```php
+public function exemplo()
+{
+    $this->addArrayData([
+        "sexos"    => ["M", "F"],
+        "situacao" => ["Ativo", "Inativo"]
+    ]);
+}
+```
+
+- `$this->addArrayMergeData(array $array)`
+
+> Adiciona um array direto no mergeData
+
+ex:
+```php
+public function __construct()
+{
+       $this->addArrayMergeData([
+        "sexos"    => ["M", "F"],
+        "situacao" => ["Ativo", "Inativo"]
+    ]);
+}
+```
