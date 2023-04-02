@@ -128,7 +128,7 @@ trait ResponseView
      */
     public function addArrayMergeData(array $array)
     {
-        $this->mergeData = array_merge($this->data, $array);
+        $this->mergeData = array_merge($this->mergeData, $array);
     }
 
     /*

@@ -1,6 +1,6 @@
-# Laravel ResponseView
-Um jeito fácil de fazer reuso de variaveis e disponibilizar para a view.
-Pode ser usado no livewire.
+![Logo](logo.png)
+
+- Pode ser usado com Livewire.
 
 ### Instalação
 - Faça o download via composer
